@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/index.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/9e90c990cd.js" crossorigin="anonymous"></script>
+
+    <title>Login Webiware</title>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html"><img src="../images/webiwarelogotipo.png" alt="Webiware" width="170px"></a>
+    </nav>
+
+    <div class="formularioLogin">
+        <form action="../pages/perfil.html">
+            <label for="user">Nome de Usuário</label>
+            <br>
+            <input type="text" name="user" id="user" class="campos" required maxlength="17">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" class="campos" required>
+            <br>
+            <label for="senha">Senha</label>
+            <br>
+            <input type="password" name="senha" id="senha" class="campos" required>
+            <br>
+            <br>
+            <input type="submit" value="Finalizar Cadastro" class="finalizarCadastro">
+        </form>
+    </div>
+    
+</body>
+</html>
