@@ -1,0 +1,446 @@
+/* =========================
+   MOCKUP TABLE LAYOUT
+========================= */
+
+:root{
+
+    --bg:#11141A;
+    --panel:#000000;
+    --panel2:#1B212D;
+
+    --line: black;
+
+    --text:black;
+    --muted:#A0A8B8;
+
+}
+
+
+/* ===== HEADER LABELS ===== */
+
+.table-labels{
+
+    display:grid;
+
+    grid-template-columns:
+        120px
+        repeat(6,1fr)
+        110px;
+
+    align-items:end;
+
+    margin-bottom:14px;
+
+    gap:0;
+}
+
+
+/* labels */
+
+.table-labels div{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:.82rem;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.06em;
+
+    padding-bottom:10px;
+
+    opacity:.95;
+}
+
+
+/* ===== BUILD ROW ===== */
+
+.build-row{
+
+    display:grid;
+
+    grid-template-columns:
+        120px
+        1fr
+        110px;
+
+    align-items:start;
+
+    gap:16px;
+
+    margin-bottom:28px;
+}
+
+
+/* ===== TIER ===== */
+
+.tier-label{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:58px;
+
+    color:#E7EBF3;
+
+    font-weight:800;
+
+    font-size:.82rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+/* ===== TIER COLORS ON CELLS ===== */
+
+.build-row:nth-child(2)
+.component-cell{
+
+    background: #FE9022;
+    background: linear-gradient(180deg, rgba(254, 144, 34, 1) 49%, rgba(255, 27, 164, 1) 100%);
+}
+
+.build-row:nth-child(3)
+.component-cell{
+
+    background: #FF1BA4;
+    background: linear-gradient(178deg, rgba(255, 27, 164, 1) 51%, rgba(94, 0, 255, 1) 100%);
+}
+
+.build-row:nth-child(4)
+.component-cell{
+
+    background: #5E00FF;
+    background: linear-gradient(178deg, rgba(94, 0, 255, 1) 55%, rgba(47, 0, 255, 1) 100%);
+}
+
+/* ===== MATCH DROPDOWN COLOR ===== */
+
+.build-row:nth-child(2)
+.details-row{
+
+    background:#FE9022;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(254,144,34,.88) 49%,
+            rgba(255,27,164,.88) 100%
+        );
+
+    color:black;
+}
+
+.build-row:nth-child(3)
+.details-row{
+
+    background:#FF1BA4;
+    background:
+        linear-gradient(
+            178deg,
+            rgba(255,27,164,.88) 51%,
+            rgba(94,0,255,.88) 100%
+        );
+
+    color:black;
+}
+
+.build-row:nth-child(4)
+.details-row{
+
+    background:#5E00FF;
+    background:
+        linear-gradient(
+            178deg,
+            rgba(94,0,255,.88) 55%,
+            rgba(47,0,255,.88) 100%
+        );
+
+    color:black;
+}
+
+
+/* ===== CENTER TABLE ===== */
+
+.build-center{
+
+    background:var(--panel);
+
+    border:1px solid var(--line);
+
+    border-radius:5px;
+
+    overflow:hidden;
+}
+
+
+/* ===== COMPONENTS ===== */
+
+.components-row{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(6,1fr);
+
+    gap:6px;
+
+    background:var(--line);
+
+    padding:5px;
+}
+
+
+/* cell */
+
+.component-cell{
+
+    min-height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:16px 18px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+.component-cell:last-child{
+
+    border-right:none;
+}
+
+.component-cell:hover{
+
+    background:
+        rgba(255,255,255,.03);
+}
+
+
+/* name */
+
+.component-name{
+
+    color:var(--text);
+
+    font-size:.88rem;
+
+    font-weight:600;
+}
+
+
+/* price */
+
+.component-price{
+
+    color:#000000;
+
+    font-size:.82rem;
+
+    font-weight:900;
+
+    white-space:nowrap;
+}
+
+
+/* ===== DROPDOWN ROW ===== */
+
+.details-row{
+
+    width:calc(100% - 10px);
+
+    margin:0 5px 5px;
+
+    display:block;
+
+    border:none;
+
+    background:var(--panel2);
+
+    border-top:
+        1px solid var(--line);
+
+    color:var(--muted);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    padding:4px;
+
+    transition:.2s ease;
+}
+
+.details-row:hover{
+
+    filter:brightness(1.08);
+
+    transition:.2s;
+}
+
+
+/* ===== DETAILS ===== */
+
+.details-box{
+
+    padding:22px;
+
+    border-top:
+        1px solid var(--line);
+
+    background:#0E061A;
+}
+
+.details-box p{
+
+    margin-bottom:14px;
+
+    color:#D5DCE8;
+}
+
+
+/* ===== TOTAL ===== */
+
+.total-label{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:58px;
+
+    background:#0E061A;
+
+    border:1px solid var(--line);
+
+    color:white;
+
+    font-size:.92rem;
+
+    font-weight:800;
+
+    border-radius:5px;
+}
+
+/* ===== TAGS ===== */
+
+.perf-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.perf-tags span{
+
+    padding:8px 12px;
+
+    border-radius:999px;
+
+    background:
+        rgba(93,139,255,.10);
+
+    border:
+        1px solid rgba(93,139,255,.16);
+
+    color:#C8D8FF;
+
+    font-size:.78rem;
+}
+
+
+/* ===== POPOVER ===== */
+
+.hardware-popover{
+
+    --bs-popover-bg:#0E061A;
+    --bs-popover-max-width:260px;
+}
+
+.popover-card{
+
+    text-align:center;
+}
+
+.popover-img{
+
+    width:90px;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+}
+
+.popover-card h6{
+
+    color:white;
+
+    margin-bottom:8px;
+}
+
+.popover-card small{
+
+    display:block;
+
+    color:#cac1cf;
+
+    margin-bottom:12px;
+}
+
+.popover-price{
+
+    color:#D7E2FF;
+
+    font-weight:700;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:992px){
+
+    .table-labels{
+
+        display:none;
+    }
+
+    .build-row{
+
+        grid-template-columns:
+            1fr;
+
+        gap:10px;
+    }
+
+    .components-row{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .total-label{
+
+        height:auto;
+
+        padding:16px;
+    }
+
+}
